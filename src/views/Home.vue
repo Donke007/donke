@@ -1,7 +1,6 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="home flex r-center l-center">
+    <HelloWorld msg="Welcome" />
   </div>
 </template>
 
@@ -19,5 +18,6 @@ export default {
 <style lang="less" scoped>
 .home {
   font-size: 0.1rem;
+  height: 100vh;
 }
 </style>
