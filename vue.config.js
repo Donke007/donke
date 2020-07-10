@@ -8,7 +8,7 @@ const resolve = dir => {
   return path.join(__dirname, dir);
 };
 
-const BASE_URL = process.env.NODE_ENV === "production" ? "/" : "/";
+const BASE_URL = process.env.NODE_ENV === "production" ? "/dist" : "/";
 
 module.exports = {
   publicPath: BASE_URL, // 根域上下文目录
