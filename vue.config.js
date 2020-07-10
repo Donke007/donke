@@ -13,7 +13,7 @@ const BASE_URL = process.env.NODE_ENV === "production" ? "/" : "/";
 module.exports = {
   publicPath: BASE_URL, // 根域上下文目录
   outputDir: "dist", // 构建输出目录
-  assetsDir: "assets", // 静态资源目录 (js, css, img, fonts)
+  assetsDir: "./", // 静态资源目录 (js, css, img, fonts)
   indexPath: "index.html",
   productionSourceMap: false, // 设为false打包时不生成.map文件
   // tweak internal webpack configuration.

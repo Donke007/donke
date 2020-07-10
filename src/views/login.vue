@@ -19,7 +19,7 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped>
+<style lang="less" scoped>
 .login-bg {
   background: #808695;
   width: 100%;

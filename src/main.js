@@ -4,8 +4,8 @@ import router from "./router";
 import store from "./store";
 import "./mock";
 import "view-design/dist/styles/iview.css";
-import "./assets/styles/common.scss";
-import "./assets/styles/index.scss";
+import "./assets/styles/common.less";
+import "./assets/styles/index.less";
 import "./iview.js";
 
 // Vue.use(ViewUI);
