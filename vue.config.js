@@ -2,12 +2,29 @@
 // const debug = process.env.NODE_ENV !== "production";
 //const VueConf = require('./src/assets/js/libs/vue_config_class')
 //const vueConf = new VueConf(process.argv)
+const path = require("path");
+
+const resolve = dir => {
+  return path.join(__dirname, dir);
+};
+
+const BASE_URL = process.env.NODE_ENV === "production" ? "/" : "/";
 
 module.exports = {
-  publicPath: "/", // 根域上下文目录
+  publicPath: BASE_URL, // 根域上下文目录
   outputDir: "dist", // 构建输出目录
   assetsDir: "assets", // 静态资源目录 (js, css, img, fonts)
   indexPath: "index.html",
+  productionSourceMap: false, // 设为false打包时不生成.map文件
+  // tweak internal webpack configuration.
+  // see https://github.com/vuejs/vue-cli/blob/dev/docs/webpack.md
+  // 如果你不需要使用eslint，把lintOnSave设为false即可
+  lintOnSave: true,
+  chainWebpack: config => {
+    config.resolve.alias
+      .set("@", resolve("src")) // key,value自行定义，比如.set('@@', resolve('src/components'))
+      .set("_c", resolve("src/components"));
+  },
   // lintOnSave: true, // 是否开启eslint保存检测，有效值：ture | false | 'error'
   // runtimeCompiler: true, // 运行时版本是否需要编译
   // transpileDependencies: [], // 默认babel-loader忽略mode_modules，这里可增加例外的依赖包名

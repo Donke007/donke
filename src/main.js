@@ -3,7 +3,12 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import "./mock";
+import "view-design/dist/styles/iview.css";
+import "./assets/styles/common.scss";
+import "./assets/styles/index.scss";
+import "./iview.js";
 
+// Vue.use(ViewUI);
 Vue.config.productionTip = false;
 
 new Vue({
