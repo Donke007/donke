@@ -6,6 +6,7 @@ import "./mock";
 import "view-design/dist/styles/iview.css";
 import "./assets/styles/common.less";
 import "./assets/styles/index.less";
+import "./assets/styles/iview.less";
 import "./iview.js";
 
 // Vue.use(ViewUI);

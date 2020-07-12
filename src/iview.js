@@ -1,6 +1,6 @@
 import Vue from "vue";
 import { Button, Table, Input } from "view-design";
 
-Vue.component("Button", Button);
-Vue.component("Table", Table);
-Vue.component("Input", Input);
+Vue.component("iButton", Button);
+Vue.component("iTable", Table);
+Vue.component("iInput", Input);
